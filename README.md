@@ -1,20 +1,20 @@
 # Advance_python
 classes in python
-why do we create classes?
+**why do we create classes?**
 1-  To create our own custom objects and data types
 2-  To define the behavior of objects
 3-   For organization and structure
 
-different between __ str __ and __ repr __:
+**different between __ str __ and __ repr __:**
 
 The __str__ method essentially defines what happens when you typecast the vector into a string. This method is intended to provide a human-readable or informal string representation of an object
 
 The __repr__ method essentially tells Python how to represent a vector when we need to represent it. This representation is often more geared towards developers and should ideally be unambiguous and potentially used to recreate the object
 
-__ call __:  you can then call that object using parentheses, just like you would call a regular function.
+**__ call __: ** you can then call that object using parentheses, just like you would call a regular function.
 
 
-__self__:
+**__self__:**
 
 Automatic First Argument: When you define a method inside a class, the first parameter it takes is, by convention, named self. Python automatically passes the instance of the class as this first argument when you call the method on an object.
 
@@ -42,59 +42,41 @@ Convention, Not Keyword: While self is a strong convention and highly recommende
 
 In essence, self is the glue that connects a method to the specific instance of the class it is operating on, allowing the method to access and modify the instance's attributes and call its other methods.
 
-Class variable
-خلاصه کن: Based on the YouTube tutorial transcript, class variables are variables that are shared among all instances of a class. This is in contrast to instance variables, which hold data that is unique to each individual instance of the class.
+**Class variable**
+ class variables are variables that are** shared among all instances of a class**. This is in contrast to instance variables, which hold data that is unique to each individual instance of the class.
 Here's a more detailed explanation of class variables:
 Shared Data: The primary characteristic of a class variable is that its value is the same for every object (instance) created from that class. The transcript provides an example of a company's annual raise percentage. This raise amount would typically be the same for all employees, making it a good candidate for a class variable.
 
 
-Declaration: Class variables are defined within the class definition but outside of any instance methods (like the __init__ method). The transcript shows an example where raise_amount = 1.04 is defined at the top of the Employee class.
+* Declaration: Class variables are defined within the class definition but outside of any instance methods (like the __init__ method). The transcript shows an example where raise_amount = 1.04 is defined at the top of the Employee class.
 
 
-Accessing Class Variables:
-
-
+* Accessing Class Variables:
 You can access class variables using the class name itself (e.g., Employee.raise_amount).
-
-
 You can also access them through an instance of the class (e.g., employee1.raise_amount).
-
-
 When you try to access an attribute on an instance, Python first checks if the instance has that attribute. If it doesn't, it then looks in the class and any classes it inherits from. Therefore, when you access raise_amount from an instance that doesn't have its own raise_amount attribute, you are actually accessing the class's raise_amount attribute.
 
 
-Use Cases:
-
-
+* Use Cases:
 Constants shared across all instances: As in the raise amount example, class variables are useful for values that should be consistent across all objects of a class.
-
-
 Tracking class-level information: The transcript introduces another example of num_of_employees. This variable keeps track of the total number of Employee instances created. Since this count should be the same regardless of the specific employee instance, it is implemented as a class variable that is incremented in the __init__ method (which runs every time a new employee is created). The transcript explicitly states that using Employee.num_of_employees is preferred here because there's no logical reason for the total number of employees to be different for any single employee instance.
 
 
 
 
-Modifying Class Variables:
-
-
+* Modifying Class Variables:
 Modifying through the class: If you modify a class variable using the class name (e.g., Employee.raise_amount = 1.05), the change will be reflected for the class itself and all existing instances that haven't overridden the class variable at the instance level.
 
 
 Modifying through an instance: If you assign a new value to a class variable using an instance (e.g., employee1.raise_amount = 1.05), it does not change the class variable for other instances or the class itself. Instead, it creates a new instance attribute with the same name for that specific instance. When you subsequently access employee1.raise_amount, you will retrieve the instance-specific value. Other instances will still access the class's raise_amount value. You can observe this by printing the namespace (__dict__) of the instance, which will now include the newly assigned attribute.
 
 
-Accessing within Methods (self vs. Class Name):
-
-
+* Accessing within Methods (self vs. Class Name):
 Within instance methods, you can access class variables using either self.raise_amount or Employee.raise_amount.
 
-
 The transcript suggests using self.raise_amount in the apply_raise method. This allows for the possibility of an individual instance having a different raise amount if needed. If a subclass is created, using self will also allow the subclass to potentially override the raise amount.
-
-
 However, for class variables like num_of_employees, where the value should truly be shared and not overridden per instance, the transcript recommends using the class name (Employee.num_of_employees) to ensure that the class-level variable is being accessed and modified.
 
 
-In summary, class variables provide a way to share data among all instances of a class, offering benefits for constants and tracking class-level state. It's crucial to understand how they are accessed and modified, especially the distinction between modifying them through the class versus through an individual instance.
 
 
