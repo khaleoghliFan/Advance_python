@@ -1,20 +1,20 @@
 # Advance_python
 classes in python
-**why do we create classes?**
+## **why do we create classes?**
 1-  To create our own custom objects and data types
 2-  To define the behavior of objects
 3-   For organization and structure
 
-**different between __ str __ and __ repr __:**
+## **different between __ str __ and __ repr __:**
 
 The __str__ method essentially defines what happens when you typecast the vector into a string. This method is intended to provide a human-readable or informal string representation of an object
 
 The __repr__ method essentially tells Python how to represent a vector when we need to represent it. This representation is often more geared towards developers and should ideally be unambiguous and potentially used to recreate the object
 
-**__ call __: ** you can then call that object using parentheses, just like you would call a regular function.
+## **__ call __: ** you can then call that object using parentheses, just like you would call a regular function.
 
 
-**__self__:**
+## **__self__:**
 
 Automatic First Argument: When you define a method inside a class, the first parameter it takes is, by convention, named self. Python automatically passes the instance of the class as this first argument when you call the method on an object.
 
@@ -42,7 +42,7 @@ Convention, Not Keyword: While self is a strong convention and highly recommende
 
 In essence, self is the glue that connects a method to the specific instance of the class it is operating on, allowing the method to access and modify the instance's attributes and call its other methods.
 
-**Class variable**
+## **Class variable**
  class variables are variables that are** shared among all instances of a class**. This is in contrast to instance variables, which hold data that is unique to each individual instance of the class.
 Here's a more detailed explanation of class variables:
 Shared Data: The primary characteristic of a class variable is that its value is the same for every object (instance) created from that class. The transcript provides an example of a company's annual raise percentage. This raise amount would typically be the same for all employees, making it a good candidate for a class variable.
