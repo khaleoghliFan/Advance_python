@@ -1,7 +1,7 @@
 # Advance_python
 classes in python
-[source:](https://colab.research.google.com/drive/1-6uzkDDuUyRjG_a7LZVZdTBxvnZQLBIb#scrollTo=_mXwOPPnCJiY&line=18&uniqifier=1)
-[source](https://www.youtube.com/watch?v=iZZtEJjQLjQ&list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc&index=2)
+- [source 1](https://colab.research.google.com/drive/1-6uzkDDuUyRjG_a7LZVZdTBxvnZQLBIb#scrollTo=_mXwOPPnCJiY&line=18&uniqifier=1)
+- [source 2](https://www.youtube.com/watch?v=iZZtEJjQLjQ&list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc&index=2)
 ## **why do we create classes?**
 1-  To create our own custom objects and data types
 2-  To define the behavior of objects
